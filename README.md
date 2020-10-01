@@ -18,7 +18,7 @@ docker run -p 6379:6379 --name redis -d redis redis-server --appendonly yes
 git@github.com:fbenfraj/trusk_technical_test.git
 ```
 
-2. Enter id
+2. Enter the folder
 ```sh
 cd trusk_technical_test
 ```
