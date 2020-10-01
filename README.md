@@ -18,6 +18,11 @@ docker run -p 6379:6379 --name redis -d redis redis-server --appendonly yes
 git@github.com:fbenfraj/trusk_technical_test.git
 ```
 
+2. Enter id
+```sh
+cd trusk_technical_test
+```
+
 2. Install NPM packages
 
 ```sh
