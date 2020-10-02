@@ -1,11 +1,11 @@
 const myQuestions = [
   {
-    message: "Quel est votre nom ?",
+    message: "Quel est votre nom ? (3 caractères min.)",
     name: "trusker_name",
     type: "input",
   },
   {
-    message: "Quel est le nom de votre société ?",
+    message: "Quel est le nom de votre société ? (3 caractères min.)",
     name: "society_name",
     type: "input",
   },
@@ -16,7 +16,7 @@ const myQuestions = [
   },
   {
     type: "input",
-    message: `Nom de l'employé * ?`,
+    message: `Nom de l'employé * ? (3 caractères min.)`,
     name: "employee_name",
   },
   {
