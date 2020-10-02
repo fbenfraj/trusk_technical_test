@@ -16,7 +16,7 @@ const myStringValidator = (str) => {
 
 const myNumberValidator = (nb) => {
   if (Number.isNaN(parseInt(nb)) || parseInt(nb) < 0) {
-    console.log("Entrée invalide.");
+    console.log("Entrée invalide. *NaN: Not a Number");
     return false;
   } else return true;
 };
