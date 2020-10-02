@@ -38,7 +38,7 @@ const askQuestion = async (params) => {
               type: params.type,
             },
           ]);
-          if (myNumberValidator(name.employee_name)) {
+          if (myStringValidator(name.employee_name)) {
             newArray.push(name);
           } else {
             return await askQuestion(params);
