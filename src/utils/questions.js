@@ -38,7 +38,11 @@ const askQuestion = async (params) => {
               type: params.type,
             },
           ]);
-          newArray.push(name);
+          if (myNumberValidator(name.employee_name)) {
+            newArray.push(name);
+          } else {
+            return await askQuestion(params);
+          }
 
           const storedNamesObj = {
             names: newArray,
@@ -92,7 +96,6 @@ const askQuestion = async (params) => {
               type: params.type,
             },
           ]);
-          console.log(truck.truck_volume);
           if (myNumberValidator(truck.truck_volume)) {
             newArray.push(truck);
           } else {
