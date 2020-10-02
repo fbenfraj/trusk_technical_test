@@ -29,20 +29,6 @@ const myQuestions = [
     message: `Volume du camion * ?`,
     name: "truck_volume",
   },
-  {
-    type: "list",
-    message: `Volume du camion * ?`,
-    name: "truck_type",
-    choices: [
-      "Camion plateau",
-      "Camion Ampliroll",
-      "Camion benne",
-      "Camion frigorifique",
-      "Camion-citerne",
-      "Camion porte char",
-      "Camion fourgon",
-    ],
-  },
 ];
 
 module.exports = { myQuestions };

@@ -73,13 +73,8 @@ const askQuestion = async (params) => {
           const formattedMessage = params.message.replace("*", i + 1);
           const truck = await inquirer.prompt([
             {
-              message: formattedMessage,
-              name: params.name,
-              type: params.type,
-            },
-            {
               type: "list",
-              message: `Volume du camion ${i + 1} ?`,
+              message: `Type du camion ${i + 1} ?`,
               name: "truck_type",
               choices: [
                 "Camion plateau",
@@ -91,9 +86,18 @@ const askQuestion = async (params) => {
                 "Camion fourgon",
               ],
             },
+            {
+              message: formattedMessage,
+              name: params.name,
+              type: params.type,
+            },
           ]);
-          newArray.push(truck);
-
+          console.log(truck.truck_volume);
+          if (myNumberValidator(truck.truck_volume)) {
+            newArray.push(truck);
+          } else {
+            return await askQuestion(params);
+          }
           const storedTrucksObj = {
             trucks: newArray,
           };
